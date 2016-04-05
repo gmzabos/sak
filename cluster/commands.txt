@@ -1,0 +1,49 @@
+qconf	
+	qconf -aq <new queue>	
+	qconf -sq <queue name>
+	qconf -mq <queue name>
+	qconf -sql
+
+	qconf -ap <parallel env>
+	qconf -sp <parallel env>
+	qconf -mp <parallel env>
+	qconf -spl <parallel env>
+
+	qconf -am <user name>
+	qconf -sm 
+	qconf -dm <user name>
+
+	qconf -ao <user name>
+	qconf -so
+	qconf -do <user name>
+	
+qmod
+	qmod -e <queue>
+	qmod -d <queue>
+	qmod -c <queue>
+	qmod -cq <queue>
+	qmod -sq <queue>
+	qmod -usq <queue>
+	qmod -rq <queue>
+
+	qmod -cj <job>
+	qmod -sj <job>
+	qmod -usj <job>
+	qmod -rj <job>
+
+qstat
+	qstat -u '*'
+	qstat -u <user>
+	qstat -f 
+	qstat -f <queue>
+	qstat -j <job>
+	qstat -s p 
+	qstat -s h
+	qstat -F slots,h_vmem
+
+qacct
+	qacct -j <job>
+	qacct -q <queue>
+	qacct -slots
+	qacct -P <project> -d <days>
+	qacct -o <user> -d <days>
