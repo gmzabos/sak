@@ -7,7 +7,8 @@
 #$ -cwd
 #$ -j y
 #$ -S /bin/bash
-#
+#$ -o speed.o
+#$ -e speed.e
 
 #########################################
 # Set Variables
@@ -18,8 +19,8 @@
 #########################################
 
 echo -e "I am wasting compute time on host: `hostname`"
-echo -e "Sleeping now: `date`"
+echo -e "Start: `date`"
 
 openssl speed
 
-echo -e "Wake up - now it is: `date`"
+echo -e "End: `date`"
