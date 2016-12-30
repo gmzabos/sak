@@ -7,6 +7,15 @@
 # Usage: sleeper.sh [time]]
 #	 default for time is 60 seconds
 
+#
+# -- SGE options :
+#
+
+#$ -S /bin/bash
+#$ -o /home/AD/gzabos
+#$ -e /home/AD/gzabos
+#$ -q test.q
+
 #########################################
 # Set Variables
 #########################################

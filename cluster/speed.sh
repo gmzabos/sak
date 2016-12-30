@@ -6,9 +6,9 @@
 #
 #$ -cwd
 #$ -j y
-#$ -S /bin/bash
 #$ -o speed.o
 #$ -e speed.e
+#$ -q test.q
 
 #########################################
 # Set Variables
@@ -18,9 +18,9 @@
 # Let#s waste some compute time
 #########################################
 
-echo -e "I am wasting compute time on host: `hostname`"
-echo -e "Start: `date`"
+echo -e "[I] am wasting compute time on host: `hostname`"
+echo -e "[S]tarting now: `date`"
 
-openssl speed
+/usr/bin/openssl speed
 
-echo -e "End: `date`"
+echo -e "[E]nded now: `date`"

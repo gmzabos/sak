@@ -1,2 +1,2 @@
 # sak
-Swiss Army Knife - daily use tools
+Collection of scripts & tools for daily use
