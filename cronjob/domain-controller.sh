@@ -11,6 +11,7 @@
 # Set Variables
 #########################################
 DOMAIN="example.com"
+DIRECTORY="/tmp"
 FILE="dc-result.txt"
 TIMES=2000
 ZZZ=300
@@ -23,7 +24,7 @@ CONTACTS='user@example.com'
 # Delete old result file, we don't need it
 #########################################
 
-rm -f $FILE
+rm -f $DIRECTORY/$FILE
 
 #########################################
 # Read MS AD information
@@ -33,7 +34,7 @@ echo -e "Start: `date`" > dc-result.txt
 
 while [ $START -lt $TIMES ]; 
 do
-	adcli info $DOMAIN | grep -e 'domain-controller =' | gawk '{ print strftime("[%Y-%m-%d_%H:%M:%S]"), $3 }' >> $FILE
+	adcli info $DOMAIN | grep -e 'domain-controller =' | gawk '{ print strftime("[%Y-%m-%d_%H:%M:%S]"), $3 }' >> $DIRECTORY/$FILE
 	let START=START+1
 	sleep $ZZZ
 done
