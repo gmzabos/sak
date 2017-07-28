@@ -28,7 +28,7 @@ yum -y install wget git bind-utils net-tools telnet libselinux-python unzip tree
 # Install Apache httpd
 #########################################
 yum -y install httpd
-cp ${SAK}/centos-webserver/www.conf $(WEB)
+cp ${SAK}/centos-webserver/www.conf ${WEB}
 service httpd start
 chkconfig httpd on
 
