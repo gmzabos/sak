@@ -24,6 +24,14 @@ yum -y install epel-release
 #########################################
 yum -y install wget git bind-utils net-tools telnet libselinux-python unzip tree mailx strace lsof ntp
 
+
+#########################################
+# Install Sigal (http://sigal.saimon.org)
+#########################################
+yum -y install python34 python34-pip
+pip3 install --upgrade pip
+pip3 install sigal
+
 #########################################
 # Install Apache httpd
 #########################################
@@ -31,6 +39,9 @@ yum -y install httpd
 cp ${SAK}/centos-webserver/www.conf ${WEB}
 service httpd start
 chkconfig httpd on
+
+
+
 
 #########################################
 # Send notification
