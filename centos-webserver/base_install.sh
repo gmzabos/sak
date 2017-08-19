@@ -24,6 +24,11 @@ yum -y install epel-release
 #########################################
 yum -y install wget git bind-utils net-tools telnet libselinux-python unzip tree mailx strace lsof ntp
 
+#########################################
+# System settings
+#########################################
+timedatectl set-timezone Europe/Berlin
+hostnamectl set-hostname webserver.gz.local
 
 #########################################
 # Install Sigal (http://sigal.saimon.org)
