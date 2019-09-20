@@ -1,0 +1,9 @@
+---
+- name: Install AWS tools
+  pip:
+    executable: pip3
+    name: "{{ pip_packages }}"
+  vars:
+    pip_packages:
+    - awscli
+    - aws-shell

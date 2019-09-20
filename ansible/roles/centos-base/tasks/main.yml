@@ -1,0 +1,10 @@
+---
+# tasks file for centos-base
+- include: basic.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: pip.yml
+  when: ansible_os_family == 'RedHat'
+
+- include: aws.yml
+  when: ansible_os_family == 'RedHat'

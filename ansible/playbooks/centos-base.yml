@@ -1,0 +1,9 @@
+---
+- name: Install linux.local
+  hosts: localhost
+  become: true
+
+  vars:
+
+  roles:
+    - { role: '~/code/sak/ansible/roles/centos-base' }
