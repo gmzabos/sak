@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-RUN yum update && \
+RUN yum update -y && \
 yum install -y ansible && \
 yum install -y git && \
 yum install -y python3 && \
