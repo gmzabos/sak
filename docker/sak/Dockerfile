@@ -11,6 +11,6 @@ yum install -y python3-pip && \
 pip3 install nodejs && \
 pip3 install awscli && \
 pip3 install aws-shell && \
-mkdir -p /opt/code-root &&
+mkdir -p /opt/code-root
 
 CMD ["/bin/bash"]
