@@ -1,4 +1,4 @@
-FROM centos7
+FROM centos:centos7
 
 RUN yum update && \
 yum install ansible -y && \
