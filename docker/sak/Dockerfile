@@ -13,4 +13,4 @@ git clone https://github.com/gmzabos/sak.git
 
 VOLUME ['/dachboden']
 
-COMMAND ['/bin/bash']
+CMD ['/bin/bash']
