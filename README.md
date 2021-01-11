@@ -1,2 +1,2 @@
 # sak
-Collection of scripts & tools for daily use
+Collection of scripts & tools

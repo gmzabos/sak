@@ -1,8 +1,0 @@
----
-- name: Install my favorite linux tools
-  yum:
-    name: "{{ packages }}"
-  vars:
-    packages:
-    - python3
-    - nmap
