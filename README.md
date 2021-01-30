@@ -1,2 +1,2 @@
 # sak
-Collection of scripts & tools
+Collection of scripts, tools and howtos
