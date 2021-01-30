@@ -3,7 +3,9 @@ Coprocessors like [Apache Phoenix](http://phoenix.apache.org/) can add extra fun
 
 As soon as you create a table or a view with and active coprocessor this adds (extra) table attributes. At some point you might decide that you don't want to use the coprocessor any longer, but the extra table attributes are still there. If you setup a workflow where you use [ExportSnapshot](https://hbase.apache.org/apidocs/org/apache/hadoop/hbase/snapshot/ExportSnapshot.html) to move snapshots to another cluster, where this coprocessor isn't available, the import via ``clone_snapshot`` and/or ``restore_snapshot`` will fail. Another result is the table being 'stuck'.
 
-This article describes how to get rid of a stuck table. This has been tested on HBase running from the Cloudera distribution version 5.16.1 & 6.3.4, but following this example should work on any other distribution.
+# Danger Zone
+This article describes how to get rid of a stuck table. This has been tested on HBase running from the Cloudera distribution version 5.16.1 & 6.3.4, but following this example should work on any other distribution. 
+**WARNING** Don't blame me for any data loss... :wink: **WARNING**
 
 ## Deactivate HBase sanity checks which are ACTIVE by default
 - Make an entry in the ``snippets for hbase-site.xml`` to set ``hbase.table.sanity.checks`` to ``false``
