@@ -12,6 +12,7 @@
 BINDIR=~/bin
 CODEDIR=~/code
 KUBECONF=~/.kube/conf
+K9SVERSION=v0.26.3
 
 #########################################
 # Setting up work environment
@@ -59,7 +60,7 @@ cd $CODEDIR
 rm -rf kubectx
 
 cd $BINDIR
-wget https://github.com/derailed/k9s/releases/download/v0.26.3/k9s_Linux_x86_64.tar.gz
+wget https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_x86_64.tar.gz
 gunzip k9s_Linux_x86_64.tar.gz
 tar xvf k9s_Linux_x86_64.tar
 rm k9s_Linux_x86_64.tar
