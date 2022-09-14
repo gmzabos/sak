@@ -43,7 +43,7 @@ fi
 # Setting up kubernetes tools
 #########################################
 cd $CODEDIR
-git clone https://github.com/ahmetb/kubectx
+git clone -q https://github.com/ahmetb/kubectx
 
 if test -f $BINDIR/kubectx; then
     echo "$BINDIR/kubectx already exists - skip creation"
@@ -71,6 +71,6 @@ if test -f $BINDIR/k9s; then
     cd $BINDIR
     wget -q https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_x86_64.tar.gz
     gunzip k9s_Linux_x86_64.tar.gz
-    tar xvf k9s_Linux_x86_64.tar
+    tar xf k9s_Linux_x86_64.tar
     rm k9s_Linux_x86_64.tar
 fi
