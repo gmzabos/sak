@@ -69,7 +69,7 @@ if test -f $BINDIR/k9s; then
     else
     echo "Adding --- k9s"
     cd $BINDIR
-    wget https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_x86_64.tar.gz
+    wget -q https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_x86_64.tar.gz
     gunzip k9s_Linux_x86_64.tar.gz
     tar xvf k9s_Linux_x86_64.tar
     rm k9s_Linux_x86_64.tar
