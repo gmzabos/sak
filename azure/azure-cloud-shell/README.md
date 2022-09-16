@@ -17,3 +17,12 @@
 - `kubens`
 - `kubectx`
 - `k9s`
+
+#### Setting up .kube/config
+The `~/.kube/config` file is the default file used by `kubectl` to store information of k8s clusters. (More on [kubeconfig files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/))
+
+With Azure CLI k8s clusters can be easily added to your `~/.kube/config` using this syntax:
+- `az aks get-credentials --resource-group <resource group> --name <cluster name>`
+
+As an example, this might look like this:
+- `az aks get-credentials --resource-group k8s-rg --name k8sakscluster`
