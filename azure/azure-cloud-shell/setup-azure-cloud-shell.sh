@@ -11,7 +11,7 @@
 #########################################
 BINDIR=~/bin
 CODEDIR=~/code
-KUBECONF=~/.kube/conf
+KUBECONF=~/.kube/config
 K9SVERSION=v0.26.3
 
 #########################################
@@ -37,6 +37,7 @@ if test -f "$KUBECONF"; then
     echo "Creating --- $KUBECONF"
     mkdir ~/.kube
     touch $KUBECONF
+    chmod 600 $KUBECONF
 fi
 
 #########################################
