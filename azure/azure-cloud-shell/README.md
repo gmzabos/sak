@@ -17,6 +17,7 @@
 - `kubens`
 - `kubectx`
 - `k9s`
+- `kubectl-kots`
 
 #### Setting up .kube/config
 The `~/.kube/config` file is the default file used by `kubectl` to store information of k8s clusters. (More on [kubeconfig files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/))
