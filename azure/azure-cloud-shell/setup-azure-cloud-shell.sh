@@ -12,7 +12,7 @@
 BINDIR=~/bin
 CODEDIR=~/code
 KUBECONF=~/.kube/config
-K9SVERSION=v0.26.3
+K9SVERSION=v0.26.6
 KOTSVERSION=v1.86.0
 
 #########################################
