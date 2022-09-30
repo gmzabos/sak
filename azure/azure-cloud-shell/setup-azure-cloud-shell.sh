@@ -13,6 +13,7 @@ BINDIR=~/bin
 CODEDIR=~/code
 KUBECONF=~/.kube/config
 K9SVERSION=v0.26.3
+KOTSVERSION=v1.86.0
 
 #########################################
 # Setting up work environment
@@ -74,4 +75,15 @@ if test -f $BINDIR/k9s; then
     gunzip k9s_Linux_x86_64.tar.gz
     tar xf k9s_Linux_x86_64.tar
     rm k9s_Linux_x86_64.tar
+fi
+
+if test -f $BINDIR/kubectl-kots; then
+    echo "$BINDIR/kubectl-kots already exists - skip creation"
+    else
+    echo "Adding --- kubectl-kots"
+    cd $BINDIR
+    wget -q https://github.com/replicatedhq/kots/releases/download/$KOTSVERSION/kots_linux_amd64.tar.gz
+    gunzip kots_linux_amd64.tar.gz
+    tar xf kots_linux_amd64.tar
+    rm kots_linux_amd64.tar
 fi
