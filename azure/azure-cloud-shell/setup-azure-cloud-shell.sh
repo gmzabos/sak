@@ -12,7 +12,7 @@
 BINDIR=~/bin
 CODEDIR=~/code
 KUBECONF=~/.kube/config
-K9SVERSION=v0.26.6
+K9SVERSION=v0.27.3
 KOTSVERSION=v1.86.0
 
 #########################################
@@ -71,10 +71,10 @@ if test -f $BINDIR/k9s; then
     else
     echo "Adding --- k9s"
     cd $BINDIR
-    wget -q https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_x86_64.tar.gz
-    gunzip k9s_Linux_x86_64.tar.gz
-    tar xf k9s_Linux_x86_64.tar
-    rm k9s_Linux_x86_64.tar
+    wget -q https://github.com/derailed/k9s/releases/download/$K9SVERSION/k9s_Linux_amd64.tar.gz
+    gunzip k9s_Linux_amd64.tar.gz
+    tar xf k9s_Linux_amd64.tar
+    rm k9s_Linux_amd64.tar
 fi
 
 if test -f $BINDIR/kubectl-kots; then
